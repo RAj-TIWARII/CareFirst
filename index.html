@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareFirst Hospital</title>
-     <!-- Open Graph Meta Tags -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="CareFirst Hospital" />
     <meta property="og:description" content="Your trusted partner in health and healing, offering world-class healthcare services." />
     <meta property="og:image" content="CareFirstBanner2" />
@@ -20,6 +20,7 @@
     <link rel="icon" href="CareFirstLogo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/> 
     <style>
         hr {
@@ -73,7 +74,7 @@
 </header>
 
 <style>
-/* Default styles (desktop view, >= 591px) */
+/* Desktop and Phone HERO SECTION */
 .DBanner {
     display: block;
 }
@@ -137,152 +138,509 @@
         </div>
     </section>
 
-    <!-- Ambulance Services Section -->
-<section id="ambulance" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Ambulance Services</h2>
-        <hr>
-        <div class="row">
-            <div class="col-md-6 d-flex align-items-center">
-                <div>
-                    <h4>Emergency at Your Doorstep</h4>
-                    <p>Our ambulances are equipped with the latest medical tools and a team of expert paramedics. Call us for 24/7 assistance, ensuring timely and safe transfers during emergencies.</p>
-                    <button class="btn btn-primary btn-lg">Call Ambulance Now</button>
+    <section id="ambulance-services" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image Section -->
+                <div class="col-md-6">
+                    <div class="ambulance-img rounded shadow-sm">
+                        
+                        <img src="https://i.pinimg.com/originals/ea/7f/2d/ea7f2dd47969349da148ea0b4ec56815.gif" alt="Ambulance Services" class="img-fluid rounded">
+                    </div>
+                </div>
+                <!-- Content Section -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">24/7 Ambulance Services</h2>
+                    <p class="text-muted mb-4">
+                        We provide reliable, fast, and equipped ambulance services available at any hour, ensuring you receive timely medical care when you need it most.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-ambulance text-primary me-3"></i>
+                            Fully-equipped ambulances with advanced life-saving equipment
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-headset text-primary me-3"></i>
+                            24/7 emergency response team ready to assist
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-road text-primary me-3"></i>
+                            Seamless coordination for quick pickup and drop-off
+                        </li>
+                    </ul>
+                    <a href="#contact-us" class="btn btn-primary btn-lg mt-3">
+                        Contact Now
+                    </a>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img class="w-100" src="https://i.pinimg.com/originals/ea/7f/2d/ea7f2dd47969349da148ea0b4ec56815.gif" class="img-fluid rounded shadow" alt="Ambulance Services">
-            </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    
+    <style>
+        #ambulance-services {
+            background-color: #f9f9f9;
+        }
+    
+        #ambulance-services h2 {
+            font-weight: bold;
+            color: #333;
+        }
+    
+        #ambulance-services p {
+            font-size: 1.1rem;
+        }
+    
+        #ambulance-services ul {
+            padding-left: 0;
+        }
+    
+        #ambulance-services li {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+    
+        #ambulance-services li i {
+            font-size: 1.3rem;
+        }
+    
+        #ambulance-services .ambulance-img {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+    
+        #ambulance-services .ambulance-img img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+    
+        #ambulance-services .ambulance-img img:hover {
+            transform: scale(1.1);
+        }
+    
+        #ambulance-services .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+    
+        #ambulance-services .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
 
 
-    <!-- Why Choose Us Section -->
-<section id="why-choose-us" class="py-5 bg-light">
+<section id="why-choose-carefirst" class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-4">Why Choose CareFirst?</h2>
-        <hr>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <i class="bi bi-emoji-smile" style="font-size: 2rem; color: #007bff;"></i>
-                <h4 class="mt-3">Compassionate Care</h4>
-                <p>Our staff is committed to providing personalized care tailored to every patient.</p>
+        <p class="text-center text-muted mb-5">
+            At CareFirst, we go above and beyond to ensure you receive compassionate care, advanced treatments, and a seamless healthcare experience. Here's why we're trusted by millions.
+        </p>
+        <div class="row gy-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-hospital-user fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Patient-Centered Care</h5>
+                        <p class="card-text text-muted">
+                            Your well-being is our priority. Personalized treatment plans crafted with empathy and precision.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <i class="bi bi-shield-check" style="font-size: 2rem; color: #28a745;"></i>
-                <h4 class="mt-3">Top-Class Safety</h4>
-                <p>Strict protocols to ensure a safe and hygienic environment for all.</p>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-laptop-medical fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Advanced Technology</h5>
+                        <p class="card-text text-muted">
+                            Equipped with the latest medical innovations for accurate diagnostics and successful treatments.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <i class="bi bi-award" style="font-size: 2rem; color: #ffc107;"></i>
-                <h4 class="mt-3">Award-Winning Team</h4>
-                <p>A team of highly skilled professionals recognized for excellence in healthcare.</p>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-user-md fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Expert Specialists</h5>
+                        <p class="card-text text-muted">
+                            A team of experienced doctors, surgeons, and healthcare professionals dedicated to your care.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-hand-holding-heart fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Compassionate Approach</h5>
+                        <p class="card-text text-muted">
+                            Caring for you and your family with warmth, dignity, and the utmost respect.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-ambulance fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">24/7 Emergency Services</h5>
+                        <p class="card-text text-muted">
+                            Round-the-clock emergency care with dedicated facilities and a quick-response team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="choose-icon mb-3">
+                            <i class="fas fa-award fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Award-Winning Care</h5>
+                        <p class="card-text text-muted">
+                            Recognized globally for excellence in patient care, innovation, and healthcare delivery.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="py-5">
+<style>
+    #why-choose-carefirst {
+        background: #f8f9fa;
+    }
+
+    #why-choose-carefirst h2 {
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    #why-choose-carefirst p.text-muted {
+        font-size: 1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .card {
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .choose-icon {
+        transition: color 0.3s ease;
+    }
+
+    .choose-icon:hover {
+        color: #007bff;
+    }
+
+    .card-title {
+        font-weight: bold;
+        margin-top: 15px;
+        color: #343a40;
+    }
+
+    .card-text {
+        color: #6c757d;
+        line-height: 1.6;
+    }
+</style>
+
+<section id="testimonials" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Patient Testimonials</h2>
-        <hr>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active text-center">
-                    <p class="lead">"CareFirst saved my life! The team is simply incredible."</p>
-                    <small>- Rajesh</small>
-                </div>
-                <div class="carousel-item text-center">
-                    <p class="lead">"Exceptional care and outstanding facilities. Highly recommended."</p>
-                    <small>- Sara</small>
-                </div>
-                <div class="carousel-item text-center">
-                    <p class="lead">"The doctors and staff were so kind and supportive."</p>
-                    <small>- Arnav</small>
+        <h2 class="text-center mb-4">What Our Patients Say</h2>
+        <hr class="bg-primary mb-5">
+        <div class="row gy-4">
+            <!-- Testimonial 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <p class="text-muted fst-italic">
+                            <i class="fas fa-quote-left me-2"></i>
+                            The care and service I received here were exceptional. The doctors truly care about the patients, and the facilities are top-notch!
+                        </p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="https://i.pinimg.com/originals/ba/f4/91/baf49152a5a6905809a8ce4c4698a7af.gif" alt="Patient Image" class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                            <div>
+                                <h6 class="fw-bold mb-0">Doggo</h6>
+                                <small class="text-muted">Barking Patient</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <p class="text-muted fst-italic">
+                            <i class="fas fa-quote-left me-2"></i>
+                            From the warm welcome at the front desk to the excellent treatment by the specialists, my experience was wonderful!
+                        </p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="https://i.pinimg.com/236x/7e/c8/fa/7ec8fa35fab93b7e0492f984f3e77e9e.jpg" alt="Patient Image" class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                            <div>
+                                <h6 class="fw-bold mb-0">Tom</h6>
+                                <small class="text-muted">Bully Patient</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <p class="text-muted fst-italic">
+                            <i class="fas fa-quote-left me-2"></i>
+                            A big thank you to the staff for being so friendly and understanding. They made my recovery smooth and stress-free.
+                        </p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="https://i.pinimg.com/736x/09/51/47/095147dc4cfbead2945c0f3da3369558.jpg" alt="Patient Image" class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                            <div>
+                                <h6 class="fw-bold mb-0">Shawn</h6>
+                                <small class="text-muted">Cool Patient</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 
+<style>
+    #testimonials {
+        background-color: #f9f9f9;
+    }
 
-<!-- Expertise and Treatments Section -->
-<section id="expertise" class="py-5">
+    #testimonials h2 {
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    #testimonials hr {
+        width: 100px;
+        height: 3px;
+        margin: 0 auto;
+    }
+
+    #testimonials .card {
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #testimonials .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    #testimonials .card p {
+        color: #495057;
+        line-height: 1.6;
+    }
+
+    #testimonials img {
+        border: 2px solid #007bff;
+    }
+
+    #testimonials .fw-bold {
+        color: #343a40;
+    }
+
+    #testimonials small {
+        color: #6c757d;
+    }
+</style>
+
+
+
+
+<section id="medical-expertise" class="py-5">
     <div class="container">
         <h2 class="text-center mb-4">Medical Expertise & Advanced Treatments</h2>
-        <hr>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <h5>Neurology</h5>
-                <p>Comprehensive brain and spine care with advanced neurosurgery and diagnostics.</p>
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle text-primary"></i> Stroke Management</li>
-                    <li><i class="bi bi-check-circle text-primary"></i> Epilepsy Treatment</li>
-                    <li><i class="bi bi-check-circle text-primary"></i> Parkinson’s Care</li>
-                </ul>
+        <p class="text-center text-muted mb-5">
+            Our team of highly skilled professionals and state-of-the-art facilities ensure world-class care across all specialties. 
+            Experience unmatched expertise combined with advanced technology for exceptional treatment.
+        </p>
+        <div class="row gy-4">
+            <!-- Expertise Card 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card expertise-card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="expertise-icon mb-4">
+                            <i class="fas fa-heartbeat fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Cardiology</h5>
+                        <p class="card-text text-muted">
+                            Comprehensive heart care, from diagnostic tests to complex surgeries, handled by leading specialists.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h5>Oncology</h5>
-                <p>World-class cancer treatment tailored to each patient with precision therapies.</p>
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle text-primary"></i> Chemotherapy</li>
-                    <li><i class="bi bi-check-circle text-primary"></i> Radiation Oncology</li>
-                    <li><i class="bi bi-check-circle text-primary"></i> Immunotherapy</li>
-                </ul>
+
+            <!-- Expertise Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card expertise-card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="expertise-icon mb-4">
+                            <i class="fas fa-brain fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Neurology</h5>
+                        <p class="card-text text-muted">
+                            Advanced care for brain and nervous system disorders with cutting-edge treatments and expert neurologists.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h5>Gastroenterology</h5>
-                <p>Comprehensive gastrointestinal care with endoscopic and minimally invasive techniques.</p>
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle text-primary"></i> Liver Disorders</li>
-                    <li><i class="bi bi-check-circle text-primary"></i> Colonoscopy</li>
-                    <li><i class="bi bi-check-circle text-primary"></i> Bariatric Surgery</li>
-                </ul>
+
+            <!-- Expertise Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card expertise-card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="expertise-icon mb-4">
+                            <i class="fas fa-syringe fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Immunology</h5>
+                        <p class="card-text text-muted">
+                            Comprehensive diagnosis and treatments for immune system conditions, promoting overall health and recovery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expertise Card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card expertise-card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="expertise-icon mb-4">
+                            <i class="fas fa-x-ray fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Radiology</h5>
+                        <p class="card-text text-muted">
+                            Advanced imaging solutions for accurate diagnostics, ensuring the best care tailored to every patient.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expertise Card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card expertise-card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="expertise-icon mb-4">
+                            <i class="fas fa-bone fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Orthopedics</h5>
+                        <p class="card-text text-muted">
+                            Comprehensive bone and joint care using minimally invasive and state-of-the-art surgical techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expertise Card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card expertise-card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="expertise-icon mb-4">
+                            <i class="fas fa-child fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Pediatrics</h5>
+                        <p class="card-text text-muted">
+                            Compassionate care for infants, children, and adolescents with top specialists in child health.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Patient Testimonials Section -->
-<section id="testimonials" class="py-5 bg-dark text-white">
-    <div class="container">
-        <h2 class="text-center mb-4"> <i class="ri-chat-heart-fill"></i> &nbsp;What Our Patients Say</h2>
-        <hr class="bg-light">
-        <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <blockquote class="blockquote text-center">
-                        <p class="mb-0">The doctors and staff are exceptional! They took great care of my mother during her surgery.</p> <br>
-                        <footer class="blockquote-footer text-white">Vijay Malya, <cite title="Source Title">Recovered Patient</cite></footer>
-                    </blockquote>
-                </div>
-                <div class="carousel-item">
-                    <blockquote class="blockquote text-center">
-                        <p class="mb-0">Thanks to CareFirst, I’m healthier than ever! Their diagnostic expertise is unmatched.</p> <br>
-                        <footer class="blockquote-footer text-white">Atharv, <cite title="Source Title">Routine Checkup</cite></footer>
-                    </blockquote>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</section>
+
+<style>
+    #medical-expertise {
+        background-color: #f9f9f9;
+    }
+
+    #medical-expertise h2 {
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    #medical-expertise p.text-muted {
+        font-size: 1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .expertise-card {
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .expertise-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .expertise-icon {
+        color: #6c757d;
+        transition: color 0.3s ease;
+    }
+
+    .expertise-card:hover .expertise-icon {
+        color: #007bff;
+    }
+
+    .expertise-card h5 {
+        font-weight: bold;
+        margin-top: 15px;
+        color: #343a40;
+    }
+
+    .expertise-card p {
+        color: #6c757d;
+        line-height: 1.6;
+    }
+</style>
+
+
+
 
 
 <!-- Health Tips Blog Section -->
@@ -327,82 +685,421 @@
 
 
     <!-- About Us Section -->
-    <section id="about" class="py-5">
+    <section id="about-us" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-4">About Us</h2>
             <hr>
-            <p>CareFirst Hospital has been serving the community with high-quality healthcare services for over two decades. Our commitment to excellence, cutting-edge technology, and compassionate care ensures our patients receive the best possible treatment. Whether you're seeking routine checkups or advanced treatments, CareFirst is here to care for you.</p>
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-lg border-0">
+                        <img class="w-100" src="https://i.pinimg.com/736x/1f/de/b3/1fdeb3492e9bb2afaf5d7b914e2f9762.jpg" alt="About Us" class="card-img-top rounded">
+                    </div>
+                </div>
+    
+                <!-- Content Column -->
+                <div class="col-md-6">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <h3 class="card-title">Who We Are</h3>
+                            <p class="card-text">
+                                At <strong>CareFirst</strong>, we are dedicated to providing exceptional healthcare services to our community. 
+                                With a mission to deliver world-class treatment, we combine state-of-the-art facilities with compassionate care to ensure every patient feels valued and supported.
+                            </p>
+                            <h5 class="mt-4">Why Choose Us?</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Advanced Medical Technology</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Skilled & Experienced Professionals</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Comprehensive Patient Support</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Trusted by Thousands of Families</li>
+                            </ul>
+                            <button class="btn btn-primary mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    
+    
+    <style>
+        #about-us h2 {
+            font-weight: 600;
+        }
+    
+        #about-us hr {
+            width: 80px;
+            height: 4px;
+            background-color: #007bff;
+            border: none;
+            margin: 0 auto 20px;
+        }
+    
+        #about-us .card-body ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+    
+        #about-us .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    
+        #about-us .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        #about-us img {
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+    
 
-    <!-- Departments Section -->
     <section id="departments" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-4">Our Departments</h2>
             <hr>
-            <div class="row">
+            <div class="row gy-4">
+                <!-- Department 1 -->
                 <div class="col-md-4">
-                    <h4>Cardiology</h4>
-                    <p>Specialized heart care services with top-notch diagnostic and treatment options.</p>
+                    <div class="card shadow-lg border-0 h-100">
+                        <div class="card-body text-center">
+                            <div class="icon mb-3">
+                                <i class="fas fa-stethoscope fa-2x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Cardiology</h5>
+                            <p class="card-text">Advanced cardiac care for diagnosis and treatment of heart conditions.</p>
+                        </div>
+                    </div>
                 </div>
+    
+                <!-- Department 2 -->
                 <div class="col-md-4">
-                    <h4>Orthopedics</h4>
-                    <p>Comprehensive orthopedic care including surgeries, therapy, and more.</p>
+                    <div class="card shadow-lg border-0 h-100">
+                        <div class="card-body text-center">
+                            <div class="icon mb-3">
+                                <i class="fas fa-x-ray fa-2x text-success"></i>
+                            </div>
+                            <h5 class="card-title">Radiology</h5>
+                            <p class="card-text">State-of-the-art imaging technology for accurate diagnostics.</p>
+                        </div>
+                    </div>
                 </div>
+    
+                <!-- Department 3 -->
                 <div class="col-md-4">
-                    <h4>Pediatrics</h4>
-                    <p>Dedicated child healthcare services from expert pediatricians.</p>
+                    <div class="card shadow-lg border-0 h-100">
+                        <div class="card-body text-center">
+                            <div class="icon mb-3">
+                                <i class="fas fa-syringe fa-2x text-danger"></i>
+                            </div>
+                            <h5 class="card-title">Emergency Care</h5>
+                            <p class="card-text">24/7 emergency services with rapid response for urgent medical needs.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Department 4 -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg border-0 h-100">
+                        <div class="card-body text-center">
+                            <div class="icon mb-3">
+                                <i class="fas fa-tooth fa-2x text-warning"></i>
+                            </div>
+                            <h5 class="card-title">Dental Care</h5>
+                            <p class="card-text">Comprehensive dental services for your oral health and hygiene.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Department 5 -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg border-0 h-100">
+                        <div class="card-body text-center">
+                            <div class="icon mb-3">
+                                <i class="fas fa-baby fa-2x text-pink"></i>
+                            </div>
+                            <h5 class="card-title">Pediatrics</h5>
+                            <p class="card-text">Specialized care for infants, children, and adolescents.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Department 6 -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg border-0 h-100">
+                        <div class="card-body text-center">
+                            <div class="icon mb-3">
+                                <i class="fas fa-eye fa-2x text-info"></i>
+                            </div>
+                            <h5 class="card-title">Ophthalmology</h5>
+                            <p class="card-text">Expert eye care for a wide range of vision-related concerns.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    <style>
+        #departments h2 {
+            font-weight: 600;
+        }
+    
+        #departments hr {
+            width: 80px;
+            height: 4px;
+            background-color: #007bff;
+            border: none;
+            margin: 0 auto 20px;
+        }
+    
+        #departments .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    
+        #departments .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        #departments .icon {
+            background-color: #f8f9fa;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    
+        #departments .icon i {
+            color: inherit;
+        }
+    
+        #departments .card-body h5 {
+            font-weight: 500;
+            margin-top: 15px;
+            color: #333;
+        }
+    
+        #departments .card-body p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+    
 
     <!-- Contact Us Section -->
     <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Us</h2>
-            <hr>
-            <p class="text-center">We'd love to hear from you. Reach out to us anytime!</p>
-        </div>
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Contact Us</h2>
+                <hr>
+                <div class="row justify-content-center">
+                    <!-- Address Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg text-center p-4">
+                            <div class="icon-container mx-auto mb-3" style="font-size: 50px; color: #007bff;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h5 class="card-title">Our Address</h5>
+                            <p class="card-text">123 Main Street, Downtown, Bangalore, India</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg text-center p-4">
+                            <div class="icon-container mx-auto mb-3" style="font-size: 50px; color: #28a745;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5 class="card-title">Call Us</h5>
+                            <p class="card-text">+91 12345 67890</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Email Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg text-center p-4">
+                            <div class="icon-container mx-auto mb-3" style="font-size: 50px; color: #dc3545;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5 class="card-title">Email Us</h5>
+                            <p class="card-text">contact@carefirst.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <style>
+            .card {
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+        
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+        
+            .icon-container {
+                animation: bounce 2s infinite;
+            }
+        
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+        </style>
+        
     </section>
 
-    <!-- Appointment Section -->
-    <section id="appointment" class="py-5 bg-light">
+    <section id="appointment" class="py-5 bg-dark text-white">
         <div class="container">
             <h2 class="text-center mb-4">Book an Appointment</h2>
-            <hr>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
+            <hr class="bg-white">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row gy-3">
+                                    <!-- Name Input -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Email Input -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Phone Number Input -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                                            <label for="phone"><i class="fas fa-phone-alt"></i> Phone Number</label>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Department Selector -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="department">
+                                                <option selected disabled>Choose a Department</option>
+                                                <option value="Cardiology">Cardiology</option>
+                                                <option value="Radiology">Radiology</option>
+                                                <option value="Pediatrics">Pediatrics</option>
+                                                <option value="Dental Care">Dental Care</option>
+                                                <option value="Ophthalmology">Ophthalmology</option>
+                                                <option value="Emergency">Emergency</option>
+                                            </select>
+                                            <label for="department"><i class="fas fa-building"></i> Department</label>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Date Picker -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="date">
+                                            <label for="date"><i class="fas fa-calendar-alt"></i> Appointment Date</label>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Time Slot Selector -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="time">
+                                                <option selected disabled>Choose a Time Slot</option>
+                                                <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                                                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                                <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                                                <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                                                <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                                                <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                                            </select>
+                                            <label for="time"><i class="fas fa-clock"></i> Time Slot</label>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Submit Button -->
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-4 mt-3">
+                                            <i class="fas fa-calendar-check"></i> Book Appointment
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="date" class="form-label">Appointment Date</label>
-                            <input type="date" class="form-control" id="date" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <img class="w-100" src="https://i.pinimg.com/736x/20/53/22/205322b69eda84ef799ce312f397c831.jpg" alt="Appointment" class="img-fluid rounded">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    
+    <style>
+        #appointment h2 {
+            font-weight: bold;
+        }
+    
+        #appointment hr {
+            width: 80px;
+            height: 4px;
+            background-color: #ffffff;
+            border: none;
+            margin: 0 auto 20px;
+        }
+    
+        #appointment .card {
+            border-radius: 8px;
+        }
+    
+        #appointment .form-floating label {
+            color: #666;
+        }
+    
+        #appointment .form-floating .form-control {
+            border: 1px solid #ddd;
+        }
+    
+        #appointment .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+        }
+    
+        #appointment .form-floating i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+    
+        #appointment button {
+            transition: background 0.3s, transform 0.2s;
+        }
+    
+        #appointment button:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+    </style>
+    
 
     <!-- Footer -->
     <footer class="py-4 bg-dark text-white text-center">
