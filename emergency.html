@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency Services - CareFirst</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Custom CSS (minimal) -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+      /* Top padding to ensure content isn't hidden behind the fixed contact bar */
+      padding-top: 70px;
+    }
+    /* Emergency Contact Bar (Fixed at the very top) */
+    #emergency-contact {
+      background-color: #dc3545;
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1050;
+    }
+    #emergency-contact a.btn {
+      background-color: #fff;
+      color: #dc3545;
+      font-weight: bold;
+    }
+    /* Hero Banner */
+    #hero {
+      background: url('') no-repeat center center/cover;
+      color: #fff;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    #hero .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    /* Floating Emergency Call Button */
+    #call-help {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1100;
+    }
+    /* Scroll To Top Button */
+    #scrollToTop {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      z-index: 1100;
+      display: none;
+      transition: opacity 0.5s;
+    }
+    /* Minimal hover effects on cards */
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s;
+    }
+    /* Timeline styling */
+    .timeline-step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 30px;
+    }
+    .timeline-step::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background-color: #007bff;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#emergency-contact" data-bs-offset="100" tabindex="0">
+
+  <!-- Emergency Contact Bar -->
+  <div id="emergency-contact" class="text-center">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <!-- Logo and Home Link -->
+          <a href="index.html" class="text-white text-decoration-none d-flex align-items-center me-3">
+            <img src="CareFirstLogo.png" alt="CareFirst Logo" style="width: 30px; margin-right: 10px;">
+            <span class="fw-bold">Home</span>
+          </a>
+          <span><i class="fas fa-phone-alt"></i> <strong>Emergency Helpline:</strong> +91 98765 43210</span>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"></i> 
+          <a href="#nearest" class="text-white text-decoration-none">Find Nearest Emergency Center</a>
+        </div>
+        <div>
+          <a href="tel:+919876543210" class="btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Hero Banner -->
+  <section id="hero">
+    <div class="hero-content container">
+      <h1 class="display-4 fw-bold">24/7 Emergency Medical Services</h1>
+      <p class="lead">Immediate care, rapid response, and life-saving treatment when you need it most.</p>
+      <a href="tel:+919876543210" class="btn btn-lg btn-primary mt-3">
+        <i class="fas fa-ambulance"></i> Call an Ambulance Now
+      </a>
+    </div>
+  </section>
+
+  <!-- 2. Rapid Ambulance Services -->
+  <section id="rapid-ambulance" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Rapid Ambulance Services</h2>
+      <div class="row g-4">
+        <!-- Basic Ambulance -->
+        <div class="col-md-4">
+          <div class="card shadow-sm text-center p-3">
+            <div class="mb-3">
+              <i class="fas fa-ambulance fa-3x text-primary"></i>
+            </div>
+            <h5 class="card-title">Basic Ambulance</h5>
+            <p class="card-text">For stable patients needing prompt transport.</p>
+          </div>
+        </div>
+        <!-- Advanced Life Support -->
+        <div class="col-md-4">
+          <div class="card shadow-sm text-center p-3">
+            <div class="mb-3">
+              <i class="fas fa-heartbeat fa-3x text-danger"></i>
+            </div>
+            <h5 class="card-title">Advanced Life Support</h5>
+            <p class="card-text">Equipped with critical care facilities and paramedics.</p>
+          </div>
+        </div>
+        <!-- Air Ambulance -->
+        <div class="col-md-4">
+          <div class="card shadow-sm text-center p-3">
+            <div class="mb-3">
+              <i class="fas fa-plane fa-3x text-warning"></i>
+            </div>
+            <h5 class="card-title">Air Ambulance</h5>
+            <p class="card-text">For rapid long-distance transfer of critical patients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Emergency Medical Services -->
+  <section id="ems" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Emergency Medical Services</h2>
+      <div class="row text-center g-4">
+        <div class="col-md-3">
+          <i class="fas fa-procedures fa-2x text-primary mb-2"></i>
+          <h6>Trauma & Accident Care</h6>
+        </div>
+        <div class="col-md-3">
+          <i class="fas fa-fire-alt fa-2x text-danger mb-2"></i>
+          <h6>Burn Treatment Unit</h6>
+        </div>
+        <div class="col-md-3">
+          <i class="fas fa-heart fa-2x text-warning mb-2"></i>
+          <h6>Stroke & Cardiac Emergency</h6>
+        </div>
+        <div class="col-md-3">
+          <i class="fas fa-user-shield fa-2x text-success mb-2"></i>
+          <h6>Infectious Disease Isolation</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Emergency Room Status (Real-Time Updates) -->
+  <section id="er-status" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Emergency Room Status</h2>
+      <p class="text-center text-muted mb-4">Current wait times for immediate care:</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="table-responsive">
+            <table class="table table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>Department</th>
+                  <th>Wait Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>General ER</td>
+                  <td id="wait-general">-- min</td>
+                </tr>
+                <tr>
+                  <td>Cardiac Emergency</td>
+                  <td id="wait-cardiac">-- min</td>
+                </tr>
+                <tr>
+                  <td>Pediatric ER</td>
+                  <td id="wait-pediatric">-- min</td>
+                </tr>
+                <tr>
+                  <td>ICU</td>
+                  <td id="wait-icu">--</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Meet Our Emergency Response Team -->
+  <section id="response-team" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Meet Our Emergency Response Team</h2>
+      <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-4 text-center">
+                <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Dr. A">
+                <h5>Dr. A. Sharma</h5>
+                <p class="text-muted">Trauma Specialist</p>
+                <a href="tel:+919876543210" class="btn btn-sm btn-primary">Call Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-4 text-center">
+                <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Dr. B">
+                <h5>Dr. B. Verma</h5>
+                <p class="text-muted">Cardiac Specialist</p>
+                <a href="tel:+919876543210" class="btn btn-sm btn-primary">Call Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Additional slides as needed -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Emergency Treatment Procedures (Timeline) -->
+  <section id="treatment-procedures" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Emergency Treatment Procedures</h2>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="timeline-step">
+            <h6>1. Ambulance Dispatch</h6>
+            <p class="text-muted">Immediate dispatch of an ambulance upon receiving your call.</p>
+          </div>
+          <div class="timeline-step">
+            <h6>2. On-Site Stabilization</h6>
+            <p class="text-muted">Paramedics provide on-site stabilization before transport.</p>
+          </div>
+          <div class="timeline-step">
+            <h6>3. Emergency Admission</h6>
+            <p class="text-muted">Fast-track admission at the emergency department upon arrival.</p>
+          </div>
+          <div class="timeline-step">
+            <h6>4. Critical Care & Diagnosis</h6>
+            <p class="text-muted">Advanced diagnostics and immediate treatment are initiated.</p>
+          </div>
+          <div class="timeline-step">
+            <h6>5. Recovery & Follow-Up</h6>
+            <p class="text-muted">Post-treatment monitoring and follow-up care to ensure recovery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Insurance & Payment Assistance -->
+  <section id="insurance" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Insurance & Payment Assistance</h2>
+      <p class="text-center text-muted mb-4">
+        We support cashless treatment and assist with all insurance claims. Trusted by leading insurance providers.
+      </p>
+      <div class="d-flex justify-content-center">
+        <!-- Placeholder logos; replace with actual images -->
+        <img src="https://via.placeholder.com/100x50?text=Logo1" class="mx-3" alt="Insurance 1">
+        <img src="https://via.placeholder.com/100x50?text=Logo2" class="mx-3" alt="Insurance 2">
+        <img src="https://via.placeholder.com/100x50?text=Logo3" class="mx-3" alt="Insurance 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Emergency Testimonials -->
+  <section id="emergency-testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Emergency Testimonials</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center">
+                <p class="lead fst-italic">"CareFirst's emergency team arrived within minutes and saved my life. Their efficiency and compassion are unmatched."</p>
+                <h6 class="mt-3">– John D.</h6>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center">
+                <p class="lead fst-italic">"The professionalism of the emergency services at CareFirst is exemplary. I felt secure from the moment they responded."</p>
+                <h6 class="mt-3">– Sarah K.</h6>
+              </div>
+            </div>
+          </div>
+          <!-- Additional testimonials as needed -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Emergency FAQs -->
+  <section id="faqs" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Emergency FAQs</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+              How fast can I get an ambulance?
+            </button>
+          </h2>
+          <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our response team aims to dispatch an ambulance within minutes of receiving your call.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+              What documents are needed for emergency admission?
+            </button>
+          </h2>
+          <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              In an emergency, minimal documentation is required. Our staff will guide you through the necessary procedures.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+              Is treatment available for non-insured patients?
+            </button>
+          </h2>
+          <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, we provide emergency treatment to all patients. Payment assistance and flexible options are available.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. About Us (Minimal Section) -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">About CareFirst</h2>
+      <p class="text-center text-muted">
+        At CareFirst, we are committed to delivering compassionate and expert emergency care, ensuring you and your loved ones receive the best treatment possible.
+      </p>
+    </div>
+  </section>
+
+  <!-- 11. Contact Us (Minimal Section) -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="text-muted">For inquiries or more information about our emergency services, please call us at <strong>+91 98765 43210</strong> or email <strong>contact@carefirst.com</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Appointment (Minimal Section) -->
+  <section id="appointment" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Book an Appointment</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label for="appName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="appName" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="appEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="appEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="appPhone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="appPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+              <label for="appDate" class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" id="appDate" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Appointment Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Emergency Call Button -->
+  <a href="tel:+919876543210" id="call-help" class="btn btn-lg btn-danger rounded-circle shadow">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- Scroll To Top Button -->
+  <a id="scrollToTop" href="#" class="btn btn-primary rounded-circle shadow">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery Script for Real-Time ER Status and Scroll To Top -->
+  <script>
+    // Function to update wait times
+    function updateWaitTimes() {
+      $('#wait-general').text(Math.floor(Math.random() * 20) + 5 + ' min');
+      $('#wait-cardiac').text(Math.floor(Math.random() * 10) + 5 + ' min');
+      $('#wait-pediatric').text(Math.floor(Math.random() * 5) + 2 + ' min');
+      $('#wait-icu').text('No Wait');
+    }
+    $(document).ready(function(){
+      updateWaitTimes();
+      setInterval(updateWaitTimes, 10000);
+      
+      // Scroll-to-top button functionality
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+          $('#scrollToTop').fadeIn();
+        } else {
+          $('#scrollToTop').fadeOut();
+        }
+      });
+      $('#scrollToTop').click(function(){
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>
