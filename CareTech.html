@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advanced Technology - CareFirst</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Minimal Custom CSS -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+      padding-top: 80px; /* Space for fixed navbar */
+    }
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* Section Header Styling */
+    .section-header {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    .section-header h2 {
+      font-weight: 700;
+      color: #333;
+    }
+    .section-header hr {
+      width: 80px;
+      height: 4px;
+      background: #007bff;
+      border: none;
+      margin: 10px auto;
+    }
+    /* Card Hover Effect */
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s;
+    }
+    /* Floating Scroll-to-Top Button */
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1100;
+      display: none;
+      transition: opacity 0.5s;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img src="CareFirstLogo.png" alt="CareFirst Logo" class="rounded-circle me-2" style="width: 35px;">
+      <a class="navbar-brand" href="index.html">CareFirst</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+         <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#digital-solutions">Digital Solutions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#equipment">Equipment</a></li>
+            <li class="nav-item"><a class="nav-link" href="#innovation">Innovation &amp; R&amp;D</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ai-analytics">AI &amp; Analytics</a></li>
+            <li class="nav-item"><a class="nav-link" href="#telemedicine">Telemedicine</a></li>
+            <li class="nav-item"><a class="nav-link" href="#success-stories">Success Stories</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Introductory Section -->
+  <header class="py-4 bg-light">
+    <div class="container text-center">
+      <h1 class="fw-bold">Advanced Technology in Healthcare</h1>
+      <p class="text-muted">Innovative solutions that transform patient care and streamline hospital operations.</p>
+    </div>
+  </header>
+
+  <!-- Digital Health Solutions Section -->
+  <section id="digital-solutions" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>Digital Health Solutions</h2>
+        <hr>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=EHR+System" class="card-img-top" alt="EHR System">
+            <div class="card-body">
+              <h5 class="card-title">Electronic Health Records</h5>
+              <p class="card-text">Integrated digital records to streamline patient data and clinical workflows.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Mobile+Apps" class="card-img-top" alt="Mobile Health Apps">
+            <div class="card-body">
+              <h5 class="card-title">Mobile Health Apps</h5>
+              <p class="card-text">Empowering patients with apps to schedule appointments, view reports, and manage their health on‑the‑go.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Cloud+Integration" class="card-img-top" alt="Cloud Integration">
+            <div class="card-body">
+              <h5 class="card-title">Cloud &amp; IoT Integration</h5>
+              <p class="card-text">Secure cloud solutions and IoT devices enabling real‑time monitoring and data analytics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- State-of-the-Art Equipment Section -->
+  <section id="equipment" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>State‑of‑the‑Art Equipment</h2>
+        <hr>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Imaging+Systems" class="card-img-top" alt="Imaging Systems">
+            <div class="card-body">
+              <h5 class="card-title">Advanced Imaging</h5>
+              <p class="card-text">High‑resolution MRI, CT, and ultrasound systems ensuring precise diagnostics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Robotic+Surgery" class="card-img-top" alt="Robotic Surgery">
+            <div class="card-body">
+              <h5 class="card-title">Robotic Surgery</h5>
+              <p class="card-text">Minimally invasive surgical systems that improve precision and reduce recovery times.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Wearable+Tech" class="card-img-top" alt="Wearable Technology">
+            <div class="card-body">
+              <h5 class="card-title">Wearable Devices</h5>
+              <p class="card-text">Smart wearables for continuous patient monitoring and personalized care.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovation & R&D Section -->
+  <section id="innovation" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>Innovation &amp; Research</h2>
+        <hr>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://via.placeholder.com/600x400?text=R%26D+Lab" class="img-fluid rounded" alt="R&D Lab">
+        </div>
+        <div class="col-md-6">
+          <h4>Driving Innovation in Healthcare</h4>
+          <p class="text-muted">Our dedicated R&amp;D team collaborates with academic and industry partners to develop breakthrough technologies that redefine patient care.</p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check text-primary me-2"></i>Clinical Research and Trials</li>
+            <li><i class="fas fa-check text-primary me-2"></i>Next‑Generation Medical Device Development</li>
+            <li><i class="fas fa-check text-primary me-2"></i>Collaborative Innovation Programs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI & Data Analytics Section -->
+  <section id="ai-analytics" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>AI &amp; Data Analytics</h2>
+        <hr>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h4>Predictive Analytics for Better Outcomes</h4>
+          <p class="text-muted">Leveraging AI to process vast datasets in real‑time, enabling predictive modeling and data‑driven decision‑making.</p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check text-primary me-2"></i>Real‑Time Data Processing</li>
+            <li><i class="fas fa-check text-primary me-2"></i>Predictive Modeling</li>
+            <li><i class="fas fa-check text-primary me-2"></i>Decision‑Support Systems</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="https://via.placeholder.com/500x300?text=AI+Analytics" class="img-fluid rounded" alt="AI Analytics">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Telemedicine Section -->
+  <section id="telemedicine" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>Telemedicine &amp; Virtual Consultations</h2>
+        <hr>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://via.placeholder.com/600x400?text=Telemedicine" class="img-fluid rounded" alt="Telemedicine">
+        </div>
+        <div class="col-md-6">
+          <h4>Remote Healthcare Solutions</h4>
+          <p class="text-muted">Our telemedicine platform offers secure, real‑time virtual consultations and remote patient monitoring, ensuring quality care no matter the distance.</p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check text-primary me-2"></i>24/7 Virtual Consultations</li>
+            <li><i class="fas fa-check text-primary me-2"></i>HIPAA‑Compliant Platform</li>
+            <li><i class="fas fa-check text-primary me-2"></i>Remote Patient Monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories Section (Replacement for Tech Partners) -->
+  <section id="success-stories" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Success Stories</h2>
+        <hr>
+      </div>
+      <div class="row g-4">
+        <!-- Success Story Card 1 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Case+Study+1" class="card-img-top" alt="Case Study 1">
+            <div class="card-body">
+              <h5 class="card-title">Optimized Patient Flow</h5>
+              <p class="card-text">By integrating advanced analytics, CareFirst reduced patient wait times by 30% through data‑driven scheduling.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Success Story Card 2 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Case+Study+2" class="card-img-top" alt="Case Study 2">
+            <div class="card-body">
+              <h5 class="card-title">Enhanced Diagnostic Accuracy</h5>
+              <p class="card-text">Our AI‑powered imaging solutions improved diagnostic accuracy, leading to faster and more precise treatments.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Success Story Card 3 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://via.placeholder.com/500x300?text=Case+Study+3" class="card-img-top" alt="Case Study 3">
+            <div class="card-body">
+              <h5 class="card-title">Telemedicine Transformation</h5>
+              <p class="card-text">Implementation of a robust telemedicine system enabled remote care for 10,000+ patients during the pandemic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faqs" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>Advanced Technology FAQs</h2>
+        <hr>
+      </div>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+              How does advanced technology enhance patient care?
+            </button>
+          </h2>
+          <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Advanced technology enables faster diagnostics, real‑time monitoring, personalized treatments, and improved resource management, ultimately leading to better patient outcomes.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+              What role does AI play in healthcare analytics?
+            </button>
+          </h2>
+          <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              AI analyzes large datasets in real‑time to predict patient risks, optimize treatment plans, and support clinical decisions, thereby enhancing care efficiency.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+              How secure are digital health platforms?
+            </button>
+          </h2>
+          <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our digital platforms use advanced encryption, rigorous security protocols, and regular audits to ensure the confidentiality and integrity of patient data.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Inquiry Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Our Technology Team</h2>
+        <hr>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label for="techName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="techName" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="techEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="techEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="techPhone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="techPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+              <label for="techMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="techMessage" rows="4" placeholder="Your inquiry or message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Emergency Call Button -->
+  <a href="tel:+919876543210" id="call-help" class="btn btn-lg btn-danger rounded-circle shadow">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- Scroll To Top Button -->
+  <a id="scrollToTop" href="#" class="btn btn-primary rounded-circle shadow">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery for Scroll-to-Top -->
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+          $('#scrollToTop').fadeIn();
+        } else {
+          $('#scrollToTop').fadeOut();
+        }
+      });
+      $('#scrollToTop').click(function(){
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>
