@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inpatient & Outpatient Services - CareFirst</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Custom CSS (minimal) -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+      padding-top: 80px; /* Space for fixed navbar */
+    }
+    /* Fixed Navbar */
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* Section header styling */
+    .section-header {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    .section-header h2 {
+      font-weight: 700;
+      color: #333;
+    }
+    .section-header hr {
+      width: 80px;
+      height: 4px;
+      background: #007bff;
+      border: none;
+      margin: 10px auto;
+    }
+    /* Tabs styling */
+    .nav-tabs .nav-link {
+      font-weight: 600;
+      padding: 10px 20px;
+    }
+    .tab-content {
+      padding: 20px 0;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s;
+    }
+    /* Floating Scroll-to-Top Button */
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1100;
+      display: none;
+      transition: opacity 0.5s;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img src="CareFirstLogo.png" alt="CareFirst Logo" class="rounded-circle me-2" style="width: 35px;">
+      <a class="navbar-brand" href="index.html">CareFirst</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+         <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#why-choose">Why Choose Us?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+            <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Introductory Header -->
+  <header class="py-4 bg-light">
+    <div class="container text-center">
+      <h1 class="fw-bold">Inpatient & Outpatient Services</h1>
+      <p class="text-muted">Comprehensive care for every need—from extended hospital stays to routine check-ups.</p>
+    </div>
+  </header>
+
+  <!-- Tabbed Interface for Services -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <ul class="nav nav-tabs justify-content-center" id="servicesTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="inpatient-tab" data-bs-toggle="tab" data-bs-target="#inpatient" type="button" role="tab" aria-controls="inpatient" aria-selected="true">
+            Inpatient Services
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="outpatient-tab" data-bs-toggle="tab" data-bs-target="#outpatient" type="button" role="tab" aria-controls="outpatient" aria-selected="false">
+            Outpatient Services
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="servicesTabContent">
+        <!-- Inpatient Tab Content -->
+        <div class="tab-pane fade show active" id="inpatient" role="tabpanel" aria-labelledby="inpatient-tab">
+          <div class="row g-4 mt-4">
+            <!-- Inpatient Card 1 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <img src="https://via.placeholder.com/500x300?text=General+Ward" class="card-img-top" alt="General Ward">
+                <div class="card-body">
+                  <h5 class="card-title">General Ward</h5>
+                  <p class="card-text">Comfortable rooms with round-the-clock care for extended stays.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Inpatient Card 2 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <img src="https://via.placeholder.com/500x300?text=ICU" class="card-img-top" alt="ICU">
+                <div class="card-body">
+                  <h5 class="card-title">Intensive Care Unit (ICU)</h5>
+                  <p class="card-text">Advanced care with continuous monitoring for critical patients.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Inpatient Card 3 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <img src="https://via.placeholder.com/500x300?text=Specialized+Units" class="card-img-top" alt="Specialized Units">
+                <div class="card-body">
+                  <h5 class="card-title">Specialized Units</h5>
+                  <p class="card-text">Expert care in cardiac, neuro, and post-operative recovery.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Outpatient Tab Content -->
+        <div class="tab-pane fade" id="outpatient" role="tabpanel" aria-labelledby="outpatient-tab">
+          <div class="row g-4 mt-4">
+            <!-- Outpatient Card 1 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <img src="https://via.placeholder.com/500x300?text=Consultations" class="card-img-top" alt="Consultations">
+                <div class="card-body">
+                  <h5 class="card-title">Specialist Consultations</h5>
+                  <p class="card-text">Timely appointments with top specialists for accurate diagnosis.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Outpatient Card 2 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <img src="https://via.placeholder.com/500x300?text=Diagnostics" class="card-img-top" alt="Diagnostics">
+                <div class="card-body">
+                  <h5 class="card-title">Diagnostic Services</h5>
+                  <p class="card-text">Advanced imaging, lab tests, and screenings for precise diagnosis.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Outpatient Card 3 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <img src="https://via.placeholder.com/500x300?text=Minor+Procedures" class="card-img-top" alt="Minor Procedures">
+                <div class="card-body">
+                  <h5 class="card-title">Minor Procedures</h5>
+                  <p class="card-text">Quick, efficient outpatient procedures with minimal downtime.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Our Services Section -->
+  <section id="why-choose" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose CareFirst?</h2>
+        <hr>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <i class="fas fa-stethoscope fa-3x text-primary mb-3"></i>
+          <h5>Comprehensive Care</h5>
+          <p class="text-muted">From inpatient wards to outpatient clinics, our care covers all your needs.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-hospital fa-3x text-danger mb-3"></i>
+          <h5>Modern Facilities</h5>
+          <p class="text-muted">State-of-the-art infrastructure ensures you receive top-quality treatment.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-user-md fa-3x text-success mb-3"></i>
+          <h5>Expert Team</h5>
+          <p class="text-muted">Our experienced doctors and staff are dedicated to your recovery and well-being.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities & Amenities Section -->
+  <section id="facilities" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Facilities & Amenities</h2>
+        <hr>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://via.placeholder.com/600x400?text=Facility+Image" class="img-fluid rounded" alt="Facilities">
+        </div>
+        <div class="col-md-6">
+          <h4 class="mb-3">Comfort & Convenience</h4>
+          <p class="text-muted">Our hospital is designed with patient comfort in mind. Enjoy modern amenities, private rooms, nutritious meals, and a calming environment—all tailored to enhance your recovery experience.</p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-check text-primary me-2"></i>24/7 Nursing & Support</li>
+            <li><i class="fas fa-check text-primary me-2"></i>Modern Diagnostic & Treatment Equipment</li>
+            <li><i class="fas fa-check text-primary me-2"></i>In-house Cafeteria & Recreation Areas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Expert Team Section -->
+  <section id="team" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Expert Team</h2>
+        <hr>
+      </div>
+      <div class="row g-4 text-center">
+        <!-- Team Member 1 -->
+        <div class="col-md-3">
+          <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Dr. Jane Doe">
+          <h6>Dr. Jane Doe</h6>
+          <p class="text-muted">Chief Medical Officer</p>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-md-3">
+          <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Dr. John Smith">
+          <h6>Dr. John Smith</h6>
+          <p class="text-muted">Head of Inpatient Care</p>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-md-3">
+          <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Dr. Emily Clark">
+          <h6>Dr. Emily Clark</h6>
+          <p class="text-muted">Outpatient Specialist</p>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="col-md-3">
+          <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Dr. Michael Lee">
+          <h6>Dr. Michael Lee</h6>
+          <p class="text-muted">Diagnostic Expert</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Patients Say</h2>
+        <hr>
+      </div>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center">
+                <p class="lead fst-italic">"The inpatient care and outpatient consultations at CareFirst are truly world-class. My experience was exceptional from start to finish."</p>
+                <h6 class="mt-3">– Laura M.</h6>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center">
+                <p class="lead fst-italic">"I received prompt and professional care during my outpatient appointment. Highly recommend CareFirst!"</p>
+                <h6 class="mt-3">– Mark T.</h6>
+              </div>
+            </div>
+          </div>
+          <!-- Additional testimonials as needed -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faqs" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <hr>
+      </div>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+              What is the difference between inpatient and outpatient care?
+            </button>
+          </h2>
+          <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Inpatient care involves admission to the hospital for overnight stays or longer treatments, while outpatient care includes visits for consultations, diagnostics, and minor procedures without overnight admission.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+              How do I book an appointment?
+            </button>
+          </h2>
+          <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              You can book an appointment by filling out our online form in the Appointment section or by calling our dedicated helpline.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+              What insurance options do you accept?
+            </button>
+          </h2>
+          <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We accept a wide range of insurance plans and also offer cashless treatment options. Please contact us for detailed information.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Section -->
+  <section id="appointment" class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>Book an Appointment</h2>
+        <hr>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label for="appName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="appName" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="appEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="appEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="appPhone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="appPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+              <label for="appDate" class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" id="appDate" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Appointment Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Emergency Call Button -->
+  <a href="tel:+919876543210" id="call-help" class="btn btn-lg btn-danger rounded-circle shadow">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- Scroll To Top Button -->
+  <a id="scrollToTop" href="#" class="btn btn-primary rounded-circle shadow">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery for Scroll-to-Top -->
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+          $('#scrollToTop').fadeIn();
+        } else {
+          $('#scrollToTop').fadeOut();
+        }
+      });
+      $('#scrollToTop').click(function(){
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>
