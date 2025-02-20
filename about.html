@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - CareFirst Hospital</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Custom CSS (minimal) -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+      padding-top: 80px; /* For fixed navbar */
+    }
+    /* Navbar styling */
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* Hero Section */
+    #hero {
+      background: url('https://via.placeholder.com/1920x600?text=About+CareFirst') no-repeat center center/cover;
+      height: 60vh;
+      position: relative;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    #hero .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    /* Section Header Styling */
+    .section-header {
+      text-align: center;
+      margin: 60px 0 20px;
+    }
+    .section-header h2 {
+      font-weight: 700;
+      color: #333;
+    }
+    .section-header hr {
+      width: 100px;
+      height: 4px;
+      background: #dc3545;
+      border: none;
+      margin: 10px auto;
+    }
+    /* Timeline Styling */
+    .timeline {
+      position: relative;
+      padding: 40px 0;
+      list-style: none;
+    }
+    .timeline:before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      content: ' ';
+      display: block;
+      width: 2px;
+      height: 100%;
+      margin-left: -1px;
+      background: #e9ecef;
+    }
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      width: 50%;
+      padding: 0 20px;
+    }
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item.right {
+      left: 50%;
+      text-align: left;
+    }
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #dc3545;
+      border: 3px solid #fff;
+      z-index: 1;
+    }
+    .timeline-item.left:before {
+      right: -10px;
+    }
+    .timeline-item.right:before {
+      left: -10px;
+    }
+    /* Team Member Images */
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s;
+    }
+    /* Floating Scroll-To-Top Button */
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1100;
+      display: none;
+      transition: opacity 0.5s;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img src="CareFirstLogo.png" alt="CareFirst Logo" class="rounded-circle me-2" style="width: 40px;">
+      <a class="navbar-brand" href="index.html">CareFirst Hospital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ms-auto">
+           <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+           <li class="nav-item"><a class="nav-link" href="#our-story">Our Story</a></li>
+           <li class="nav-item"><a class="nav-link" href="#mission-vision">Mission &amp; Vision</a></li>
+           <li class="nav-item"><a class="nav-link" href="#history">History</a></li>
+           <li class="nav-item"><a class="nav-link" href="#values">Core Values</a></li>
+           <li class="nav-item"><a class="nav-link" href="#team">Leadership</a></li>
+           <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+           <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+           <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
+           <li class="nav-item"><a class="nav-link" href="#virtual-tour">Virtual Tour</a></li>
+           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content container">
+      <h1 class="display-4 fw-bold">About CareFirst Hospital</h1>
+      <p class="lead">Committed to delivering exceptional care and innovative solutions since [Year].</p>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="our-story" class="py-5">
+    <div class="container">
+      <div class="section-header">
+         <h2>Our Story</h2>
+         <hr>
+      </div>
+      <p class="text-muted fs-5">
+         Founded in [Year], CareFirst Hospital began as a humble clinic with a vision to transform healthcare. Today, we are a state‑of‑the‑art institution that blends advanced technology with compassionate care. Our journey reflects the dedication of our team and our relentless pursuit of excellence in patient care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section id="mission-vision" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+         <h2>Our Mission &amp; Vision</h2>
+         <hr>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <h4 class="text-primary">Our Mission</h4>
+            <p class="text-muted">
+               To provide high‑quality, compassionate healthcare through innovative practices, advanced technology, and a patient‑centered approach.
+            </p>
+         </div>
+         <div class="col-md-6">
+            <h4 class="text-primary">Our Vision</h4>
+            <p class="text-muted">
+               To be a global leader in healthcare, continuously pushing the boundaries of innovation and excellence while creating a healthier future for all.
+            </p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Timeline Section -->
+  <section id="history" class="py-5">
+    <div class="container">
+      <div class="section-header">
+         <h2>Our History</h2>
+         <hr>
+      </div>
+      <ul class="timeline">
+         <li class="timeline-item left">
+           <h5>[Year]</h5>
+           <p>CareFirst Hospital is founded with a commitment to community healthcare.</p>
+         </li>
+         <li class="timeline-item right">
+           <h5>[Year]</h5>
+           <p>Expansion into specialized departments including cardiology, neurology, and orthopedics.</p>
+         </li>
+         <li class="timeline-item left">
+           <h5>[Year]</h5>
+           <p>Launch of our cutting‑edge diagnostic and treatment center.</p>
+         </li>
+         <li class="timeline-item right">
+           <h5>[Year]</h5>
+           <p>Achieved international accreditation for excellence in healthcare.</p>
+         </li>
+         <li class="timeline-item left">
+           <h5>[Year]</h5>
+           <p>Introduced robotic surgery, telemedicine, and AI‑driven diagnostics.</p>
+         </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Core Values Section -->
+  <section id="values" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+         <h2>Our Core Values</h2>
+         <hr>
+      </div>
+      <div class="row text-center">
+         <div class="col-md-3">
+            <i class="fas fa-heart fa-3x text-danger mb-2"></i>
+            <h5>Compassion</h5>
+            <p class="text-muted">We care deeply for every patient.</p>
+         </div>
+         <div class="col-md-3">
+            <i class="fas fa-award fa-3x text-warning mb-2"></i>
+            <h5>Excellence</h5>
+            <p class="text-muted">We strive for the highest standards in all we do.</p>
+         </div>
+         <div class="col-md-3">
+            <i class="fas fa-lightbulb fa-3x text-primary mb-2"></i>
+            <h5>Innovation</h5>
+            <p class="text-muted">We continuously embrace new technologies and ideas.</p>
+         </div>
+         <div class="col-md-3">
+            <i class="fas fa-users fa-3x text-success mb-2"></i>
+            <h5>Teamwork</h5>
+            <p class="text-muted">Collaboration and respect drive our success.</p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team Section -->
+  <section id="team" class="py-5">
+    <div class="container">
+      <div class="section-header">
+         <h2>Our Leadership Team</h2>
+         <hr>
+      </div>
+      <div class="row g-4 text-center">
+         <div class="col-md-3 team-member">
+            <img src="https://via.placeholder.com/150?text=CEO" alt="CEO">
+            <h6 class="mt-2">Dr. A. Kumar</h6>
+            <p class="text-muted">Chief Executive Officer</p>
+         </div>
+         <div class="col-md-3 team-member">
+            <img src="https://via.placeholder.com/150?text=COO" alt="COO">
+            <h6 class="mt-2">Ms. R. Verma</h6>
+            <p class="text-muted">Chief Operating Officer</p>
+         </div>
+         <div class="col-md-3 team-member">
+            <img src="https://via.placeholder.com/150?text=CMO" alt="CMO">
+            <h6 class="mt-2">Dr. S. Gupta</h6>
+            <p class="text-muted">Chief Medical Officer</p>
+         </div>
+         <div class="col-md-3 team-member">
+            <img src="https://via.placeholder.com/150?text=CTO" alt="CTO">
+            <h6 class="mt-2">Mr. P. Singh</h6>
+            <p class="text-muted">Chief Technology Officer</p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities & Infrastructure Section -->
+  <section id="facilities" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+         <h2>Our Facilities &amp; Infrastructure</h2>
+         <hr>
+      </div>
+      <div class="row align-items-center">
+         <div class="col-md-6">
+            <img src="https://via.placeholder.com/600x400?text=Hospital+Facilities" class="img-fluid rounded" alt="Hospital Facilities">
+         </div>
+         <div class="col-md-6">
+            <h4>Modern &amp; Patient‑Friendly</h4>
+            <p class="text-muted">Our hospital is equipped with cutting‑edge technology, spacious patient rooms, and a welcoming environment designed to promote healing and comfort.</p>
+            <ul class="list-unstyled">
+               <li><i class="fas fa-check text-primary me-2"></i>Advanced diagnostic centers</li>
+               <li><i class="fas fa-check text-primary me-2"></i>Efficient surgical suites</li>
+               <li><i class="fas fa-check text-primary me-2"></i>Patient-centric amenities</li>
+            </ul>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Recognitions Section -->
+  <section id="awards" class="py-5">
+    <div class="container">
+      <div class="section-header">
+         <h2>Awards &amp; Recognitions</h2>
+         <hr>
+      </div>
+      <div class="row text-center">
+         <div class="col-md-4 mb-3">
+            <i class="fas fa-trophy fa-3x text-warning"></i>
+            <h5 class="mt-2">Excellence Award 2020</h5>
+            <p class="text-muted">For outstanding patient care and innovation.</p>
+         </div>
+         <div class="col-md-4 mb-3">
+            <i class="fas fa-medal fa-3x text-primary"></i>
+            <h5 class="mt-2">Best Hospital 2019</h5>
+            <p class="text-muted">Awarded by the National Health Association.</p>
+         </div>
+         <div class="col-md-4 mb-3">
+            <i class="fas fa-star fa-3x text-danger"></i>
+            <h5 class="mt-2">Top Innovator 2021</h5>
+            <p class="text-muted">Recognized for groundbreaking advancements in healthcare technology.</p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Initiatives Section -->
+  <section id="community" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+         <h2>Our Community Initiatives</h2>
+         <hr>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <h4>Health Camps &amp; Outreach Programs</h4>
+            <p class="text-muted">We regularly organize free health camps, educational seminars, and screening programs to ensure the well‑being of our community.</p>
+         </div>
+         <div class="col-md-6">
+            <img src="https://via.placeholder.com/600x400?text=Community+Outreach" class="img-fluid rounded" alt="Community Outreach">
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Tour & Video Gallery Section -->
+  <section id="virtual-tour" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+         <h2>Virtual Tour &amp; Video Gallery</h2>
+         <hr>
+      </div>
+      <div class="row g-4">
+         <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+               <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Virtual Tour Video" allowfullscreen></iframe>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <img src="https://via.placeholder.com/600x400?text=Gallery+Image" class="img-fluid rounded" alt="Gallery Image">
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <div class="section-header">
+         <h2>What Our Patients Say</h2>
+         <hr>
+      </div>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active">
+               <div class="row justify-content-center">
+                  <div class="col-md-8 text-center">
+                     <p class="lead fst-italic">"CareFirst Hospital has been a beacon of hope and excellence in healthcare. Their commitment to innovation and compassionate care is unmatched."</p>
+                     <h6 class="mt-3">– Alex R.</h6>
+                  </div>
+               </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="carousel-item">
+               <div class="row justify-content-center">
+                  <div class="col-md-8 text-center">
+                     <p class="lead fst-italic">"From advanced technology to a caring staff, CareFirst truly sets the standard for modern healthcare."</p>
+                     <h6 class="mt-3">– Priya S.</h6>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Inquiry Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header">
+         <h2>Get in Touch</h2>
+         <hr>
+      </div>
+      <div class="row justify-content-center">
+         <div class="col-md-8">
+            <form>
+               <div class="mb-3">
+                  <label for="contactName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="contactName" placeholder="Enter your name" required>
+               </div>
+               <div class="mb-3">
+                  <label for="contactEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email" required>
+               </div>
+               <div class="mb-3">
+                  <label for="contactMessage" class="form-label">Message</label>
+                  <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your message" required></textarea>
+               </div>
+               <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p>&copy; 2025 CareFirst Hospital. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Emergency Call Button -->
+  <a href="tel:+919876543210" id="call-help" class="btn btn-lg btn-danger rounded-circle shadow">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- Scroll To Top Button -->
+  <a id="scrollToTop" href="#" class="btn btn-primary rounded-circle shadow">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery for Scroll-to-Top Button -->
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+          $('#scrollToTop').fadeIn();
+        } else {
+          $('#scrollToTop').fadeOut();
+        }
+      });
+      $('#scrollToTop').click(function(){
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>
