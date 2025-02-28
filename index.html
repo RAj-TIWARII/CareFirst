@@ -46,7 +46,27 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" tabindex="0">
-     <!-- Navigation Bar -->
+       <style>
+        .navbar-nav .nav-item .nav-link {
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #f8d210 !important;
+        }
+        .dropdown-menu {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Navigation Bar -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
@@ -60,14 +80,14 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#home" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-                        <ul class="dropdown-menu animate__animated animate__fadeIn">
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="about.html">About Us</a></li>
                             <li><a class="dropdown-item" href="emergency.html">Emergency Services</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                        <ul class="dropdown-menu animate__animated animate__fadeIn">
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="heartcare.html">Heart Care</a></li>
                             <li><a class="dropdown-item" href="CareTech.html">CareTech</a></li>
                             <li><a class="dropdown-item" href="physicaltherapy.html">Physical Therapy</a></li>
